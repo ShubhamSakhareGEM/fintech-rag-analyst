@@ -1,5 +1,9 @@
 # FinSight: Financial 10-K Report Analyst
 
+**Live Demo:** [Click here to use FinSight](https://fintech-rag-analyst-3xpu7schfrwwsfbzrn9ip4.streamlit.app/)
+
+**FinSight** is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
+
 **FinSight** is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
 
 I built this project to move beyond basic CRUD applications and explore **GenAI engineering**, specifically focusing on how to handle large context windows and vector retrieval in a financial context.
@@ -109,6 +113,16 @@ While building this, I encountered real-world engineering hurdles:
 
   * **Issue:** LangChain updates frequently, causing `ModuleNotFoundError`.
   * **Solution:** I refactored the code to use the modern `langchain-community` and `langchain-google-genai` libraries and unpinned specific versions to allow for compatibility fixes on different OS architectures (M1 Mac vs Intel).
+
+**4. The "SQLite Version Mismatch" Crash**
+
+  * **Issue:** The default Linux environment on Streamlit Cloud uses an older version of SQLite (v3.31), but the vector database (Chroma/FAISS) requires a newer version (v3.35+). This caused the app to crash immediately upon deployment.
+  * **Solution:** I implemented a "hot-swap" patch in app.py. By installing pysqlite3-binary and injecting it into sys.modules at runtime, I forced the application to use a modern, compatible database engine without needing root server access.
+
+**5. Python 3.13 Compatibility**
+
+  * **Issue:** Streamlit Cloud defaults to the latest Python 3.13. However, critical libraries like langchain-community and faiss-cpu have not yet released stable wheels for 3.13, leading to ModuleNotFoundError: No module named 'langchain.chains'.
+  * **Solution:** I explicitly pinned the environment to Python 3.10 in the deployment settings and locked the requirements.txt versions (langchain==0.1.16) to ensure a stable, reproducible build.
 
 -----
 
