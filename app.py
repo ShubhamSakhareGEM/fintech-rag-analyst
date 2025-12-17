@@ -90,7 +90,7 @@ def user_input(user_question, api_key):
         st.error(f"Error: {str(e)}")
 
 st.markdown("""
-## 📊 FinSight: Financial Document Analyst
+## FinSight: Financial Document Analyst
 *Upload a financial PDF (e.g., 10-K report) and ask questions.*
 """)
 
