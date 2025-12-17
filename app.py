@@ -1,16 +1,18 @@
 import streamlit as st
 from PyPDF2 import PdfReader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
-# from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_community.embeddings import HuggingFaceEmbeddings
-import google.generativeai as genai
-from langchain_community.vectorstores import FAISS
 
+from langchain_community.vectorstores import FAISS
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.chains.question_answering import load_qa_chain
+from langchain.chains.question_answering import load_qa_chain 
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
+import google.generativeai as genai
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 #-----Page configuration-----
 st.set_page_config(page_title="FinSight: 10-K Analyzer", layout="wide")
