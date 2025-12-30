@@ -2,6 +2,8 @@
 
 **Live Demo:** [Click here to use FinSight](https://fintech-rag-analyst-3xpu7schfrwwsfbzrn9ip4.streamlit.app/)
 
+<img width="1440" height="861" alt="Screenshot 2025-12-30 at 14 22 02" src="https://github.com/user-attachments/assets/2207bd48-3609-4ecc-87d4-f82947ee4a1e" />
+
 **FinSight** is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
 
 **FinSight** is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
