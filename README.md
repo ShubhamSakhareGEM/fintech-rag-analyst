@@ -4,11 +4,9 @@
 
 <img width="1440" height="861" alt="Screenshot 2025-12-30 at 14 22 02" src="https://github.com/user-attachments/assets/2207bd48-3609-4ecc-87d4-f82947ee4a1e" />
 
-**FinSight** is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
+I built **FinSight** which is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
 
-**FinSight** is a Retrieval-Augmented Generation (RAG) application designed to assist financial analysts and investors. It allows users to upload complex financial documents (like SEC 10-K filings, Earnings Call transcripts, or Insurance Policies) and chat with them to extract specific metrics, risk factors, and summaries.
-
-I built this project to move beyond basic CRUD applications and explore **GenAI engineering**, specifically focusing on how to handle large context windows and vector retrieval in a financial context.
+I worked on this project to move beyond basic CRUD applications and explore **GenAI engineering**, specifically focusing on how to handle large context windows and vector retrieval in a financial context.
 
 -----
 
